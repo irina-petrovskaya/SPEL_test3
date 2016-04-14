@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+    <bean id="foo" class="a.b.c.Foo">
+
+        <property name="p2" value="#{@zoo.boo}"/>       <!-- try to rename 'boo' here -->
+        <property name="p1" value="#{zoo.list.size()}"/>   <!-- try to rename 'list' here -->
+    </bean>
+    <bean id="boo" class="a.b.c.Boo">
+       <property name="ppp" value="#{foo.returnString()}"/>  <!-- another case - try to rename the method here: results are strange -->
+    </bean>
+    <bean id="zoo" class="a.b.c.Zoo">
+        <property name="boo" value="boo"/>
+        <property name="list" value="#{{1,2,3}}"/>
+    </bean>
+</beans>
