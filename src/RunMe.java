@@ -18,5 +18,6 @@ public class RunMe {
         System.out.println("foo.p2() = " + foo.getP2());
         System.out.println("boo.ppp() = " + boo.getPpp());
         System.out.println("zoo.getQwerty() = " + zoo.getQwerty());
+        boo.displayProps();
     }
 }

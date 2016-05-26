@@ -1,10 +1,13 @@
 package a.b.c;
 
+import org.springframework.beans.factory.annotation.Value;
+
 /**
  * by Irina.Petrovskaya, on 02.12.11, 19:46
  */
 public class Foo {
     
+    public static String PP2 = "pp2";
     int p1;
     String p2;
 
@@ -26,5 +29,9 @@ public class Foo {
     
     public String returnString(){
         return "foo";
+    }
+
+    public String returnFooString(String arg){
+        return arg;
     }
 }

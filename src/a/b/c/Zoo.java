@@ -6,7 +6,7 @@ import java.util.List;
  * by Irina.Petrovskaya, on 02.12.11, 19:49
  */
 public class Zoo {
-
+    public static String QWERTY = "QWERTY";
     private String zooString;
     private List list;
     private String qwerty;
