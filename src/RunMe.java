@@ -1,5 +1,6 @@
 import a.b.c.Boo;
 import a.b.c.Foo;
+import a.b.c.Zoo;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 /**
@@ -12,8 +13,10 @@ public class RunMe {
         ctx.refresh();
         Foo foo = ctx.getBean(Foo.class);
         Boo boo = ctx.getBean(Boo.class);
+        Zoo zoo = ctx.getBean(Zoo.class);
         System.out.println("foo.p1 = " + foo.getP1());
         System.out.println("foo.p2() = " + foo.getP2());
         System.out.println("boo.ppp() = " + boo.getPpp());
+        System.out.println("zoo.getQwerty() = " + zoo.getQwerty());
     }
 }

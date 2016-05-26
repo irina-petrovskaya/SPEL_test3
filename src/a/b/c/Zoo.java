@@ -7,21 +7,22 @@ import java.util.List;
  */
 public class Zoo {
 
-    private String boo;
+    private String zooString;
     private List list;
+    private String qwerty;
 
     /**
-     * @param boo
+     * @param zooStr
      */
-    public void setBoo(String boo) {
-        this.boo = boo;
+    public void setZooStr(String zooStr) {
+        this.zooString = zooStr;
     }
 
     /**
-     * @return
+     * @return boo
      */
-    public String getBoo() {
-        return boo;
+    public String getZooStr() {
+        return zooString;
     }
 
     public void setList(List list) {
@@ -30,5 +31,13 @@ public class Zoo {
 
     public List getList() {
         return list;
+    }
+
+    public void setQwerty(String qwerty) {
+        this.qwerty = qwerty;
+    }
+
+    public String getQwerty() {
+        return qwerty;
     }
 }
