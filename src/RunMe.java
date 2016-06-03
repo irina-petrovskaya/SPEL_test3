@@ -1,6 +1,4 @@
-import a.b.c.Boo;
-import a.b.c.Foo;
-import a.b.c.Zoo;
+import a.b.c.*;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 /**
@@ -19,5 +17,7 @@ public class RunMe {
         System.out.println("boo.ppp() = " + boo.getPpp());
         System.out.println("zoo.getQwerty() = " + zoo.getQwerty());
         boo.displayProps();
+        Compo1 compo1 = ctx.getBean(Compo1.class);
+        compo1.displayProps();
     }
 }

@@ -9,7 +9,7 @@
         <property name="p1" value="#{zoo.list.size()}"/>   <!-- try to rename 'list' here -->
     </bean>
     <bean id="boo" class="a.b.c.Boo">
-       <property name="ppp" value="#{foo.returnFooString('foo')}"/>  <!-- another case - try to rename the method here: results are strange -->
+       <property name="ppp" value="#{@foo.returnFooString('foo')}"/>  <!-- another case - try to rename the method here: results are strange -->
     </bean>
     <bean id="zoo" class="a.b.c.Zoo">
         <property name="zooStr" value="boo"/>
@@ -17,7 +17,11 @@
         <property name="qwerty" value="#{new a.b.c.Qwerty('qwerty').returnQweStr('str',0)}"/>
     </bean>
     <bean id="qwerty" class="a.b.c.Qwerty">
-        <constructor-arg name="idStr" value="qwe"/>
+        <constructor-arg name="idStr" value="#{'qwe'}"/>
     </bean>
-    <context:annotation-config></context:annotation-config>
+    <context:annotation-config/>
+    <context:component-scan base-package="a.b.c"/>
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:myprops.properties"/>
+    </bean>
 </beans>

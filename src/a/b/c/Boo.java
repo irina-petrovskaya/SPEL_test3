@@ -15,7 +15,7 @@ public class Boo {
     private String qwertyMethodCall;
     @Value("#{new a.b.c.Qwerty('qwe').returnListSize({T(a.b.c.Foo).PP2, T(a.b.c.Zoo).QWERTY, new java.lang.String('aaa')})}")
     private int listsize1;
-    @Value("#{qwerty.returnListSize(new java.util.ArrayList({'aaa','bbb'}))}")
+    @Value("#{@qwerty.returnListSize(new java.util.ArrayList({'aaa ','bbb'}))}")
     private int listsize2;
     @Value("#{new a.b.c.DummyFactory().getDummy(T(java.lang.String))}")
     private Dummy<String> dummyType1;
